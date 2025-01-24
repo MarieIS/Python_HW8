@@ -1,10 +1,11 @@
+# это решение годится только для случаев, когда в каждой из строк записано только по одному числу
 def get_sum(my_file_name):
     numbers_list = list()
     tot_sum = 0
     with open(my_file_name, 'r', encoding='utf-8') as f:
-        rows_list = f.readlines() # список строк в текстовом режиме
+        rows_list = f.readlines() # списки строк в текстовом режиме
         for row in rows_list:
-            numbers_list.append(*row.split())
+            numbers_list.append(*row.split()) # распаковываем каждый из списков
         
         for number in numbers_list:
             tot_sum += int(number)
